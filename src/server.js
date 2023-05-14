@@ -35,8 +35,7 @@ app.get("/audio", (req, res) => {
 
   res.setHeader("Content-Length", stat.size);
   res.setHeader("Content-Type", "audio/mpeg");
-
-  readStream.pipe(res);
+  res.setHeader("Content-Disposition", "inline");
 
   readStream.pipe(res);
 });
