@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
 });
 
 app.get("/audio", (req, res) => {
-  const filePath = path.join(__dirname, "src/audio/Simple.mp3");
+  const filePath = path.join(__dirname, "audio/Simple.mp3");
   const stat = fs.statSync(filePath);
   const readStream = fs.createReadStream(filePath);
 
